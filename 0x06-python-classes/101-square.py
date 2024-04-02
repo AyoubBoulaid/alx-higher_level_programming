@@ -31,7 +31,7 @@ class Square:
     @property
     def position(self):
         """Get or set the position of the square."""
-        return (self._position)
+        return self._position
 
     @position.setter
     def position(self, value):
@@ -68,4 +68,4 @@ class Square:
             [print("#", end="") for k in range(0, self._size)]
             if i != self._size - 1:
                 print("")
-        return ("")
+        return ""
