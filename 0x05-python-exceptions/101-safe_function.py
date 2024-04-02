@@ -1,24 +1,23 @@
 #!/usr/bin/python3
 
-import sys
+
+mport sys
 
 
-def safe_print_integer_err(value):
-    """Prints an integer with "{:d}".format().
-
-    If a ValueError message is caught, a corresponding
-    message is printed to standard error.
+def safe_function(fct, *args):
+    """Executes a function safely.
 
     Args:
-        value (int): The integer to print.
+        fct: The function to execute.
+        args: Arguments for fct.
 
     Returns:
-        If a TypeError or ValueError occurs - False.
-        Otherwise - True.
+        If an error occurs - None.
+        Otherwise - the result of the call to fct.
     """
     try:
-        print("{:d}".format(value))
-        return (True)
-    except (TypeError, ValueError):
+        result = fct(*args)
+        return (result)
+    except:
         print("Exception: {}".format(sys.exc_info()[1]), file=sys.stderr)
-        return (False)
+        return (None)
