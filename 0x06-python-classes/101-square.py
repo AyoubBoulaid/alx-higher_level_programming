@@ -25,7 +25,7 @@ class Square:
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
-            raise ValueError("size must be greater than or equale to 0")
+            raise ValueError("size must be >= 0")
         self._size = value
 
     @property
