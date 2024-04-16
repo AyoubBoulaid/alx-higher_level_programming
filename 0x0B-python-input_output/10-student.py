@@ -3,7 +3,14 @@
 
 
 class Student:
-    """Represent a student."""
+    """
+    Represent a student.
+
+    Attributes:
+        first_name (str): first name of student.
+        last_name (int): last name of student.
+        age (int): age of student.
+        """
 
     def __init__(self, first_name, last_name, age):
         """Initialize a new Student.
